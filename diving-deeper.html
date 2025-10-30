@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diving Deeper Exercise</title>
+
+  <!-- Animate.css CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(135deg, #f0f4f8, #d9e4f5);
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: linear-gradient(90deg, #4a90e2, #5ac8fa);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    /* 🎥 Hero Video Section */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 350px;
+      overflow: hidden;
+    }
+
+    .hero video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      filter: brightness(70%);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 5;
+    }
+
+    h2 {
+      color: #4a90e2;
+      margin-top: 2rem;
+      border-bottom: 2px solid #4a90e2;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 15px;
+      margin-top: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background: #4a90e2;
+      color: white;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #5ac8fa;
+      transform: translateY(-2px) scale(1.05);
+    }
+
+    .back-to-top {
+      display: block;
+      text-align: center;
+      margin-top: 3rem;
+      font-weight: 500;
+      color: #4a90e2;
+      transition: transform 0.3s ease;
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-3px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #4a90e2;
+      color: white;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      main {
+        margin: 1.5rem;
+        padding: 1.5rem;
+      }
+      .hero {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="main-heading" class="animate__animated animate__fadeInDown">
+    <h1>Main Heading</h1>
+    <p class="animate__animated animate__fadeInUp animate__delay-1s">
+      My first modern web page — built with HTML, CSS and Animation!
+    </p>
+  </header>
+
+  <!-- 🎥 HERO VIDEO SECTION -->
+  <div class="hero animate__animated animate__fadeIn">
+    <video autoplay muted loop playsinline>
+      <source src="Ocean.mp4.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <h2 class="animate__animated animate__fadeInLeft">Subheading 1</h2>
+    <p class="animate__animated animate__fadeInUp animate__delay-1s">
+      <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel dapibus tortor.</b>
+    </p>
+    <p class="animate__animated animate__fadeInUp animate__delay-1s">
+      <i>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.</i>
+    </p>
+
+    <img class="animate__animated animate__zoomIn animate__delay-2s"
+         src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80"
+         alt="Ocean">
+
+    <h2 class="animate__animated animate__fadeInLeft animate__delay-2s">Subheading 2</h2>
+    <p class="animate__animated animate__fadeInUp animate__delay-3s">
+      <b>Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper.</b>
+    </p>
+    <p class="animate__animated animate__fadeInUp animate__delay-3s">
+      <i>Aliquam erat volutpat. In congue egestas nunc, sit amet varius orci.</i>
+    </p>
+
+    <img class="animate__animated animate__fadeInRight animate__delay-3s"
+         src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?auto=format&fit=crop&w=1000&q=80"
+         alt="Web coding">
+
+    <a class="btn animate__animated animate__pulse animate__infinite animate__delay-4s"
+       href="http://www.lifechoices.co.za/" target="_blank">Visit Life Choices</a>
+
+    <a class="back-to-top animate__animated animate__fadeInUp animate__delay-5s" href="#main-heading">⬆️ Back to Main Heading</a>
+
+    <a class="back-to-top animate__animated animate__fadeInUp animate__delay-5s" href="index2.html">⬆️ Back to Welcome Page</a>
+
+  </main>
+
+  <footer class="animate__animated animate__fadeInUp animate__delay-5s">
+    &copy; 2025 Gazelle Pearson | Diving Deeper Exercise
+  </footer>
+
+</body>
+</html>
